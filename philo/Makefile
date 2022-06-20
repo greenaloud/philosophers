@@ -5,7 +5,11 @@ NAME = philo
 
 SRCS = main.c \
 		error.c \
-		sett.c
+		sett.c \
+		util.c \
+		init.c \
+		run.c \
+		free.c
 
 OBJS = $(SRCS:.c=.o)
 

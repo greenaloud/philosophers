@@ -12,3 +12,8 @@ void	argc_value_error(void)
 	write(STDERR_FILENO, "philo: argument value error: "
 		"all the arguments should be positive numbers\n", 74);
 }
+
+void	malloc_error(void)
+{
+	write(STDERR_FILENO, "philo: malloc error\n", 20);
+}

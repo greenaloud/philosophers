@@ -1,9 +1,11 @@
 #include "sett.h"
+#include "init.h"
 #include "error.h"
+#include <stdio.h>
 
 int	main(int argc, char **argv)
 {
-	t_sett	sett;
+	t_sett		sett;
 
 	if (argc != 5 && argc != 6)
 	{
@@ -15,6 +17,11 @@ int	main(int argc, char **argv)
 		argc_value_error();
 		return (1);
 	}
-	print_sett(&sett);
+	if (init_philos(&sett) == 0)
+	{
+		malloc_error();
+		return (1);
+	}
+	printf("all ended\n");
 	return (0);
 }

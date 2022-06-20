@@ -3,5 +3,6 @@
 
 void	argc_error(void);
 void	argc_value_error(void);
+void	malloc_error(void);
 
 #endif

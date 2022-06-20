@@ -1,6 +1,3 @@
-//디버그용 제출시 삭제
-#include <stdio.h>
-
 #include <limits.h>
 #include "sett.h"
 
@@ -33,17 +30,10 @@ static int	ft_atoi(const char *str)
 	return ((int)(sign * result));
 }
 
-// 디버그용함수 제출시 삭제
-void	print_sett(t_sett *sett)
-{
-	printf("nof: %d\nttd: %d\ntte: %d\ntts: %d\nmet: %d\n",
-		sett->nof, sett->ttd, sett->tte, sett->tts, sett->met);
-}
-
 int	init_sett(int argc, char **argv, t_sett *sett)
 {
-	sett->nof = ft_atoi(argv[1]);
-	if (sett->nof <= 0)
+	sett->nop = ft_atoi(argv[1]);
+	if (sett->nop <= 0)
 		return (0);
 	sett->ttd = ft_atoi(argv[2]);
 	if (sett->ttd <= 0)
